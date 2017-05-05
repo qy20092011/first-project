@@ -9,7 +9,7 @@ var sass = require('gulp-sass');
 //用来编译sass文件
 gulp.task('compileSass',function(){
 	//先查找sass文件所在的位置
-	gulp.src(['src/sass/common.scss','src/sass/home.scss'])
+	gulp.src(['src/sass/top.scss'])
 	//通过pipe放大导入到gulp的插件中实现编译sass
 	.pipe(sass())
 
@@ -19,26 +19,48 @@ gulp.task('compileSass',function(){
 
 
 //监听文件修改，执行相应任务
-gulp.task('jsSass',function(){
+gulp.task('jtSass',function(){
 	//监听sass文件，如果有修改,则编译
 	gulp.watch('src/sass/*.scss',['compileSass'])
 })
 
-//用于js文件的压缩
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-gulp.task('compressJs',function(){
-	gulp.src('src/js/*.js')
+// //用于js文件的压缩
+// var uglify = require('gulp-uglify');
+// var rename = require('gulp-rename');
+// gulp.task('compressJs',function(){
+// 	gulp.src('src/js/*.js')
 
-	//压缩
-	.pipe(uglify())
+// 	//压缩
+// 	.pipe(uglify())
 
-	//重命名
-	.pipe(rename({
-		suffix:'.min';
-	}))
+// 	//重命名
+// 	.pipe(rename({
+// 		suffix:'.min';
+// 	}))
 
-	//输出
-	.pipe(gulp.dest('src/js/'))
+// 	//输出
+// 	.pipe(gulp.dest('src/js/'))
 
+// });
+
+
+
+// 同步任务
+var browserSync = require('browser-sync');
+gulp.task('server',function(){
+	browserSync({
+		server: "./src",
+
+		// 代理服务器
+		// proxy:'http://localhost/h5_1701/',
+
+		// 自定义端口
+		// port:999,
+
+		// 监听文件修改，自动刷新浏览器
+		files:['./src/*.html','./src/css/*.css']
+	});
+
+	// 监听sass文件修改，执行编译sass文件
+	gulp.watch('src/sass/*.scss',['compileSass']);
 });

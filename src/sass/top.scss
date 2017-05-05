@@ -1,0 +1,16 @@
+.top1{
+	height:30px;
+	background:#ccc;
+	line-height:30px;
+	font-size:12px;
+	.pull-left{
+		padding-left:70px;
+		.citySelect{display:none;}
+	}
+	.pull-right{
+		padding-right:70px;
+		float:right;
+		li{float:left;}
+	}
+}
+

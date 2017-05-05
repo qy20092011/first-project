@@ -1,0 +1,14 @@
+.top1 {
+  height: 30px;
+  background: #ccc;
+  line-height: 30px;
+  font-size: 12px; }
+  .top1 .pull-left {
+    padding-left: 70px; }
+    .top1 .pull-left .citySelect {
+      display: none; }
+  .top1 .pull-right {
+    padding-right: 70px;
+    float: right; }
+    .top1 .pull-right li {
+      float: left; }
