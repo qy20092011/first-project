@@ -1,0 +1,34 @@
+.main {
+  height: 4199px; }
+  .main .showAd {
+    height: 200px;
+    border-bottom: 1px solid #ccc; }
+    .main .showAd ul li {
+      float: left;
+      margin: 25px; }
+  .main .shop1 {
+    height: 1000px;
+    border-bottom: 1px solid #ccc; }
+    .main .shop1 > img {
+      width: 100%;
+      height: 150px; }
+    .main .shop1 .txt {
+      height: 150px; }
+      .main .shop1 .txt img {
+        float: left;
+        margin: 30px; }
+      .main .shop1 .txt a {
+        float: right;
+        margin: 30px; }
+    .main .shop1 .show .larger {
+      transform: scale(1.1); }
+    .main .shop1 .show ul li {
+      padding: 7px;
+      float: left; }
+      .main .shop1 .show ul li span {
+        color: #999; }
+      .main .shop1 .show ul li a {
+        float: right; }
+        .main .shop1 .show ul li a i {
+          color: yellow;
+          font-size: 30px; }

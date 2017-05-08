@@ -1,0 +1,76 @@
+.footer_1 {
+  border-right: 1px solid #ccc;
+  background: url(../img/icon.png) 40px 0 no-repeat; }
+
+.footer_2 {
+  border-right: 1px solid #ccc;
+  background: url(../img/icon.png) 40px -60px no-repeat; }
+
+.footer_3 {
+  border-right: 1px solid #ccc;
+  background: url(../img/icon.png) 40px -120px no-repeat; }
+
+.footer_4 {
+  background: url(../img/icon.png) 40px -180px no-repeat; }
+
+.footer1 ul {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px; }
+  .footer1 ul li {
+    width: 320px;
+    height: 60px;
+    display: inline-block; }
+
+.footer2 {
+  height: 300px;
+  border-bottom: 1px solid #ccc; }
+  .footer2 > div {
+    width: 315px;
+    height: 145px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px; }
+    .footer2 > div > img {
+      margin-left: 80px;
+      margin-top: 30px; }
+    .footer2 > div > p {
+      text-align: center; }
+  .footer2 ul {
+    float: left;
+    margin: 50px; }
+    .footer2 ul li {
+      float: left;
+      margin: 10px; }
+      .footer2 ul li a {
+        display: block; }
+      .footer2 ul li p {
+        text-align: center; }
+
+.footer3 p {
+  margin-top: 30px;
+  text-align: center; }
+
+.footer3 div {
+  margin: 30px 47%; }
+
+.footer3 img {
+  width: 30px;
+  height: 30px; }
+
+.menuFixed {
+  width: 35px;
+  height: 109px;
+  position: fixed;
+  bottom: 50px;
+  right: 30px; }
+  .menuFixed a span {
+    display: block;
+    width: 35px;
+    height: 35px; }
+  .menuFixed .kf1 {
+    background: url("../img/kf.png") 0 0 no-repeat; }
+  .menuFixed .kf2 {
+    background: url("../img/kf.png") 0 -35px no-repeat; }
+  .menuFixed .kf3 {
+    background: url("../img/kf.png") 0 -70px no-repeat; }

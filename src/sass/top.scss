@@ -1,16 +1,114 @@
 .top1{
-	height:30px;
-	background:#ccc;
+	color:#999;
+	background:#eee;
 	line-height:30px;
-	font-size:12px;
+	font-size:13px;
 	.pull-left{
-		padding-left:70px;
-		.citySelect{display:none;}
+		margin-left:70px;
+		a{color: #64a131;padding-left:5px;}
+		a:hover{text-decoration:underline;}
+		span{
+			display:inline-block;
+			height:31px;
+			margin-right:5px;
+			position:relative;
+			a{color:#999;}
+			.icon-car2{color:#64a131;}
+			.citySelect{
+				overflow-y:auto;
+				overflow-x:hidden;
+				// box-shadow:2px 1px 1px 1px rgba(0,0,0,0.3);
+				width:300px;
+				height:300px;
+				background:white;
+				position:absolute;
+				display:none;
+				top:30px;
+				left:0px;
+				.hotCity{height:40px;li{float:left;border-bottom:none;}}
+				.datalist span{float:right;}
+				ul{
+					li{
+						border-bottom:1px dotted #ccc;
+						ul{display:none;li{border-bottom:3px solid #64a131;}}
+					}
+				}
+			}
+		}
 	}
 	.pull-right{
+		a{color:#999}
+		a:hover{color:yellow;text-decoration:underline;}
+		i{color:#64a131;font-size:16px;}
 		padding-right:70px;
 		float:right;
-		li{float:left;}
+		li{float:left;padding-left:10px;padding-right:10px;}
+		.notice{
+			position:relative;
+			ul{			
+				width:150px;
+				height:150px;
+				position:absolute;
+				top:30px;
+				left:0px;
+				background:white;
+				display:none;
+			}
+		}
+		.phoneFruit{
+			position:relative;
+			ul{			
+				width:300px;
+				height:350px;
+				position:absolute;
+				top:30px;
+				left:0px;
+				background:white;
+				display:none;
+				li{
+					margin-top:10px;
+					.box{
+						width:150px;height:40px;float:right;
+						text-align:center;
+						a{
+							img{margin-top:20px;float:right;}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
+.active{border-bottom: 3px solid #64a131;background-color: #eee;}
+.top2{
+	height: 125px;
+	.top2_l{
+		.logo{
+			width: 250px;height: 60px;
+			background: url('../img/logo.svg') no-repeat center;
+			background-size: cover;
+			margin-left: 30px;margin-top: 30px;float: left;display: block;
+		}
+		ul{
+			float: left;padding-left: 30px;
+			li{
+				float: left;padding: 40px;text-align:center;
+			 	a>span{display: block;text-align: center;color: #999;}
+			}
+		}
+	}
+	.top2_r{
+		input{height:20px;}
+		.search{
+			input{border: none;}
+			float: right;margin-top: 30px;margin-right: 100px;
+			ul li{
+				float: left;padding: 10px;
+				a:hover{text-decoration:underline;}
+			}
+			i{color:white;background-color:#64a131;border-radius:50%;}
+			
+		}
+	}
+}
