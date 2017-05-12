@@ -12,10 +12,15 @@
 	<link rel="stylesheet" href="css/footer.css">
 	
 	<script src="lib/jquery-3.1.1.js"></script>
+	<script src="lib/jquerycookie/jquery.cookie.js"></script>
 	<script src="js/top.js"></script>
 	<script src="js/wrap.js"></script>
+	<script src="js/main.js"></script>
+	<script src="lib/jquery.fly.js"></script>
+	<script src="js/shopfly.js"></script>	
 	<script src="js/toTop.js"></script>
 
+	
 </head>
 <body>
 
@@ -34,10 +39,9 @@
 							<li><a href="#">北京</a></li>
 							<li><a href="#">杭州</a></li>
 							<li><a href="#">南京</a></li>
-							<li><a href="#">深圳</a></li>
 						</ul>
 						<h5>选择城市</h5>
-						<ul class="datalist">
+						<ul class="ctDatalist">
 							<li><a href="#">上海</a></li>
 							<li><a href="#">深圳</a></li>
 							<li><a href="#">香港</a></li>
@@ -81,8 +85,8 @@
 			</span>
 			<span class="pull-right">
 				<ul>	
-					<li>
-						<a href="html/login.html">[登录]</a> ,
+					<li class="user">
+						<a href="html/login.html" >[登录]</a> ,
 						<a href="html/register.html">[注册有惊喜]</a>
 					</li>
 					<li>|</li>
@@ -131,66 +135,68 @@
 				</ul>
 			</span>	
 		</div>
-		<div class="top2">
+		<div style="width: 100%;height: 125px;">
+			<div class="top2">
 
-			<div class="top2_l">
-				<a href="#"><div class="logo"></div></a>
-				<ul>
-					<li>
-						<a href="">首页
-							<span>Home</span>
-						</a>
-					</li>
-					<li>
-						<a href="">鲜果
-							<span>Fruit</span>
-						</a>
-					</li>
-					<li>
-						<a href="">生鲜
-							<span>Fresh</span>
-						</a>
-					</li>
-					<li>
-						<a href="">礼品
-							<span>Gift</span>
-						</a>
-					</li>
-					<li>
-						<a href="">会员中心
-							<span>VIP Club</span>
-						</a>
-					</li>
-				</ul>			
-			</div>
-			
-			<div class="top2_r">
-				<div class="search">
-					<input type="text" placeholder="奇异果">
-					<button>
-						<span class="iconfont icon-sou"></span>
-					</button>
-					<a href="html/car.html"> <i class="iconfont icon-gouwuche" style="font-size: 40px;"></i></a>
-					<hr>
+				<div class="top2_l">
+					<a href="#"><div class="logo"></div></a>
 					<ul>
 						<li>
-							<span style="color: #f60;">热门 :</span>
+							<a href="#">首页
+								<span>Home</span>
+							</a>
 						</li>
 						<li>
-							<a href="#">橙</a>
+							<a href="html/fruitarea.html">鲜果
+								<span>Fruit</span>
+							</a>
 						</li>
 						<li>
-							<a href="#">提子</a>
+							<a href="html/fresh.html">生鲜
+								<span>Fresh</span>
+							</a>
 						</li>
 						<li>
-							<a href="#">蓝莓</a>
+							<a href="html/gift.html">礼品
+								<span>Gift</span>
+							</a>
 						</li>
 						<li>
-							<a href="#">苹果</a>
+							<a href="html/user.html">会员中心
+								<span>VIP Club</span>
+							</a>
 						</li>
-					</ul>
-				</div>			
-			</div>
+					</ul>			
+				</div>
+				
+				<div class="top2_r">
+					<div class="search">
+						<input type="text" placeholder="奇异果">
+						<button>
+							<span class="iconfont icon-sou"></span>
+						</button>
+						<a href="list.html"><i class="iconfont icon-gouwuche" style="font-size: 40px;"></i><span style="color: #f60;" class="shopnum">0</span></a>
+						<hr>
+						<ul>
+							<li>
+								<span style="color: #f60;">热门 :</span>
+							</li>
+							<li>
+								<a href="#">橙</a>
+							</li>
+							<li>
+								<a href="#">提子</a>
+							</li>
+							<li>
+								<a href="#">蓝莓</a>
+							</li>
+							<li>
+								<a href="#">苹果</a>
+							</li>
+						</ul>
+					</div>			
+				</div>
+			</div>			
 		</div>
 	</div>
 
@@ -224,647 +230,50 @@
 			</ul>
 		</div>
 		
-		<div class="shop1">
+		<div class="shop">
 			<div class="txt">
 				<img src="img/shop1.png" alt="">
 				<a href="" style="color: black;">更多></a>				
 			</div>
 			<div class="show">
-				<ul>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (1).jpg" alt=""></a>
-						</div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (2).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                        Driscoll`s云南树莓
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2盒</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (3).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国山竹
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥88.00/2+1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (4).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         洛川苹果
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥99.00/8斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (5).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         佳沛新西兰阳光金奇异果(巨无霸)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥199.00/22个</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (6).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         越南红心火龙果(小)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥49.00/4斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (7).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         智利咔嚓脆青提
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (8).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国玲珑榴莲
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥69.90/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (9).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         美国加州红杉樱桃
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥108.00/1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-				</ul>
+
 			</div>
 		</div>
 
-		<div class="shop1">
+		<div class="shop">
 			<div class="txt">
 				<img src="img/shop2.png" alt="">
 				<a href="" style="color: black;">更多></a>				
 			</div>
 			<div class="show">
-				<ul>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (1).jpg" alt=""></a>
-						</div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (2).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                        Driscoll`s云南树莓
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2盒</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (3).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国山竹
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥88.00/2+1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (4).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         洛川苹果
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥99.00/8斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (5).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         佳沛新西兰阳光金奇异果(巨无霸)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥199.00/22个</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (6).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         越南红心火龙果(小)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥49.00/4斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (7).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         智利咔嚓脆青提
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (8).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国玲珑榴莲
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥69.90/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (9).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         美国加州红杉樱桃
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥108.00/1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-				</ul>
+
 			</div>
 			<img src="img/advertise.jpg" alt="">				
 		</div>
 
-		<div class="shop1">
+		<div class="shop">
 			<div class="txt">
-				<img src="img/shop3.png" alt="">
+				<img src="img/shop2.png" alt="">
 				<a href="" style="color: black;">更多></a>				
 			</div>
 			<div class="show">
-				<ul>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (1).jpg" alt=""></a>
-						</div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (2).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                        Driscoll`s云南树莓
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2盒</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (3).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国山竹
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥88.00/2+1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (4).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         洛川苹果
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥99.00/8斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (5).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         佳沛新西兰阳光金奇异果(巨无霸)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥199.00/22个</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (6).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         越南红心火龙果(小)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥49.00/4斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (7).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         智利咔嚓脆青提
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (8).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国玲珑榴莲
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥69.90/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (9).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         美国加州红杉樱桃
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥108.00/1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-				</ul>
+
+			</div>
+			<img src="img/advertise.jpg" alt="">				
+		</div>
+
+		<div class="shop">
+			<div class="txt">
+				<img src="img/shop2.png" alt="">
+				<a href="" style="color: black;">更多></a>				
+			</div>
+			<div class="show">
+
 			</div>
 		</div>
 
-		<div class="shop1">
-			<div class="txt">
-				<img src="img/shop3.png" alt="">
-				<a href="" style="color: black;">更多></a>				
-			</div>
-			<div class="show">
-				<ul>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (1).jpg" alt=""></a>
-						</div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (2).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                        Driscoll`s云南树莓
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2盒</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (3).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国山竹
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥88.00/2+1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (4).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         洛川苹果
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥99.00/8斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (5).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         佳沛新西兰阳光金奇异果(巨无霸)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥199.00/22个</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (6).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         越南红心火龙果(小)
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥49.00/4斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (7).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         智利咔嚓脆青提
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥68.00/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (8).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         泰国玲珑榴莲
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥69.90/2斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-					<li>
-						<div class="showPic">
-							<a href=""><img src="img/shop1 (9).jpg" alt=""></a>
-						</div>
-						<div class="showInfo">
-		                    <div class="s-name">
-		                         美国加州红杉樱桃
-		                    </div>
-		                    <div class="s-unit">
-		                        <span>￥108.00/1斤</span>
-		                        <a href="">
-		                        	<i class="iconfont icon-gouwuchekong"></i>
-		                        </a>
-		                    </div>
-		                    <div class="s-che" data-pid="21323" data-price="199.00"></div>
-		                </div>
-						<div></div>
-					</li>
-				</ul>
-			</div>
-			<img src="img/advertise.jpg" alt="">
-		</div>
+		<script src="js/lazyindex.js"></script>
+
 	</div>
 
 	<div class="footer">

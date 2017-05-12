@@ -1,0 +1,23 @@
+.area {
+  height: 3000px; }
+  .area ul {
+    margin-bottom: 30px; }
+  .area > ul > li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px; }
+    .area > ul > li span {
+      padding: 10px; }
+  .area .shoparea {
+    width: 70%;
+    float: left; }
+    .area .shoparea ul li {
+      float: left;
+      margin: 30px;
+      border: 1px solid #ccc; }
+  .area .record {
+    width: 25%;
+    float: right; }
+    .area .record img {
+      margin-left: 40px; }
+    .area .record h4 {
+      text-align: center; }

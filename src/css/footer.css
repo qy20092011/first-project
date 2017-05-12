@@ -62,8 +62,8 @@
   width: 35px;
   height: 109px;
   position: fixed;
-  bottom: 50px;
-  right: 30px; }
+  bottom: 0px;
+  right: 0px; }
   .menuFixed a span {
     display: block;
     width: 35px;

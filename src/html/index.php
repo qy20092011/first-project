@@ -32,16 +32,20 @@
 </head>
 <body>
 	<div class="dkHeader">
-		<h3>Email:<?php echo $_SESSION['login_email']; ?></h2>
+		<h3 style="margin-top: 11px;">Email:<?php echo $_SESSION['login_email']; ?></h3>
 		<!-- <input type="button" name="" value="退出" class="btn btn-info"> -->
 	</div>
+
 	<div class="dkContainer">
 		<div class="dkNav">
+
 			<ul class="list-group">
 				<li class="list-group-item"><a href="javascript:">修改用户信息</a></li>
 				<li class="list-group-item"><a href="javascript:">修改密码</a></li>
+				<li class="list-group-item"><a href="user.html">用户中心</a></li>
 				<li class="list-group-item"><a href="logout.php">退出</a></li>
 			</ul>
+
 		</div>
 		<div class="dkBody">
 			
@@ -64,20 +68,22 @@
 			        <div class="col-sm-10">
 			          <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
 			        </div>
-			      </div>         
+			      </div>
 			      <div class="form-group">
 			        <div class="col-sm-offset-2 col-sm-10">
 			          <button type="button" id="submit" class="btn btn-default">Confirm</button>
 			        </div>
 			      </div>
 			    </form>
-		  	</div>			
+		  	</div>
 
 		</div>
 	</div>
+
 	<div class="dkFoot"></div>
 
 	<script type="text/javascript">
+
 		$(function(){
 			$('#submit').click(function(){
 				$.post('modify.php',{
@@ -94,6 +100,7 @@
 				})				
 			})
 		})
+
 	</script>	
 </body>
 </html>

@@ -6,29 +6,32 @@
     .main .showAd ul li {
       float: left;
       margin: 25px; }
-  .main .shop1 {
+  .main .shop {
     height: 1000px;
     border-bottom: 1px solid #ccc; }
-    .main .shop1 > img {
+    .main .shop > img {
       width: 100%;
       height: 150px; }
-    .main .shop1 .txt {
+    .main .shop .txt {
       height: 150px; }
-      .main .shop1 .txt img {
+      .main .shop .txt img {
         float: left;
         margin: 30px; }
-      .main .shop1 .txt a {
+      .main .shop .txt a {
         float: right;
         margin: 30px; }
-    .main .shop1 .show .larger {
+    .main .shop .show .larger {
       transform: scale(1.1); }
-    .main .shop1 .show ul li {
+    .main .shop .show ul li {
       padding: 7px;
       float: left; }
-      .main .shop1 .show ul li span {
-        color: #999; }
-      .main .shop1 .show ul li a {
+      .main .shop .show ul li h4 {
+        color: #999;
+        display: inline-block; }
+        .main .shop .show ul li h4 span {
+          color: #999; }
+      .main .shop .show ul li a {
         float: right; }
-        .main .shop1 .show ul li a i {
+        .main .shop .show ul li a i {
           color: yellow;
           font-size: 30px; }

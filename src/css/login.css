@@ -20,14 +20,13 @@
   width: 1000px;
   height: 550px;
   margin: 100px auto; }
-
-p {
-  font-size: 20px;
-  color: #999999;
-  padding-top: 15px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 36px; }
+  .container p {
+    font-size: 20px;
+    color: #999999;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 36px; }
 
 .login_l {
   float: left;

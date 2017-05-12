@@ -1,0 +1,20 @@
+.area{
+	height:3000px;
+	ul{margin-bottom:30px;}
+	&>ul>li{
+		border-bottom: 1px solid #ccc;
+		padding: 10px;
+		span{padding: 10px;}
+	}
+	.shoparea{
+		width:70%;float: left;
+		ul li{
+			float: left; margin: 30px;border: 1px solid #ccc;
+		}
+	}
+	.record{
+		width: 25%;float: right;
+		img{margin-left:40px;}
+		h4{text-align: center;}
+	}
+}

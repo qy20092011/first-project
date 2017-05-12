@@ -13,6 +13,7 @@
     .top1 .pull-left span {
       display: inline-block;
       height: 31px;
+      padding-left: 5px;
       margin-right: 5px;
       position: relative; }
       .top1 .pull-left span a {
@@ -22,26 +23,35 @@
       .top1 .pull-left span .citySelect {
         overflow-y: auto;
         overflow-x: hidden;
+        box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75);
         width: 300px;
-        height: 300px;
+        height: 350px;
         background: white;
         position: absolute;
         display: none;
-        top: 30px;
+        top: 31px;
         left: 0px; }
         .top1 .pull-left span .citySelect .hotCity {
-          height: 40px; }
+          background: #eee;
+          height: 50px; }
           .top1 .pull-left span .citySelect .hotCity li {
+            padding: 5px;
             float: left;
             border-bottom: none; }
-        .top1 .pull-left span .citySelect .datalist span {
+        .top1 .pull-left span .citySelect .ctDatalist span {
           float: right; }
-        .top1 .pull-left span .citySelect ul li {
-          border-bottom: 1px dotted #ccc; }
-          .top1 .pull-left span .citySelect ul li ul {
-            display: none; }
-            .top1 .pull-left span .citySelect ul li ul li {
-              border-bottom: 3px solid #64a131; }
+        .top1 .pull-left span .citySelect h5 {
+          padding: 20px;
+          font-size: 16px; }
+        .top1 .pull-left span .citySelect ul {
+          padding: 5px; }
+          .top1 .pull-left span .citySelect ul li {
+            padding: 5px;
+            border-bottom: 1px dotted #ccc; }
+            .top1 .pull-left span .citySelect ul li ul {
+              display: none; }
+              .top1 .pull-left span .citySelect ul li ul li {
+                border-bottom: 3px solid #64a131; }
   .top1 .pull-right {
     padding-right: 70px;
     float: right; }
@@ -58,25 +68,28 @@
       padding-left: 10px;
       padding-right: 10px; }
     .top1 .pull-right .notice {
+      height: 31px;
       position: relative; }
       .top1 .pull-right .notice ul {
         width: 150px;
         height: 150px;
         position: absolute;
-        top: 30px;
+        top: 31px;
         left: 0px;
         background: white;
-        display: none; }
+        display: none;
+        box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75); }
     .top1 .pull-right .phoneFruit {
       position: relative; }
       .top1 .pull-right .phoneFruit ul {
         width: 300px;
         height: 350px;
         position: absolute;
-        top: 30px;
+        top: 31px;
         left: 0px;
         background: white;
-        display: none; }
+        display: none;
+        box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75); }
         .top1 .pull-right .phoneFruit ul li {
           margin-top: 10px; }
           .top1 .pull-right .phoneFruit ul li .box {
@@ -93,6 +106,7 @@
   background-color: #eee; }
 
 .top2 {
+  width: 100%;
   height: 125px; }
   .top2 .top2_l .logo {
     width: 250px;

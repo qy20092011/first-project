@@ -9,6 +9,44 @@
 	<link rel="stylesheet" href="../css/register.css">
 	<script type="text/javascript" src="../libs/jquery/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../libs/jquery-confirm/jquery-confirm.js"></script>
+
+	<script>
+		$(()=>{
+			
+			$('#email').blur(function(){
+				var $email = $('#email').val();
+				if(!/^[\w\-\.]+@[a-z\d\-]+(\.[a-z]+){1,2}$/.test($email)){
+				  alert('你输入的邮箱不合法');
+				  return false;
+				}
+			})
+
+			$('#password').blur(function(){
+				var $password = $('#password').val();
+				if(!/^\S{1,20}$/.test($password)){
+				  alert('密码不合法');
+				  return false;
+				}				
+			})
+
+			$('#repassword').blur(function(){
+				var $repassword = $('#repassword').val();
+				if($password != $repassword){
+					alert('两次密码输入不一致');
+					return false;
+				}				
+			})
+
+			$('#phone').blur(function(){
+				var $phone = $('#phone').val();
+				if(!/^1[34578]\d{9}$/.test($phone)){
+					alert('手机号不合法');
+					return false;
+				}				
+			})
+
+		})
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -43,7 +81,7 @@
 			      <div class="form-group">
 			        <label for="inputEmail3" class="col-sm-2 control-label">Phone</label>
 			        <div class="col-sm-10">
-			          <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+			          <input type="val" class="form-control" id="phone" name="phone" placeholder="Phone">
 			        </div>
 			      </div>         
 			      <div class="form-group">

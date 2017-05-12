@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<style>
+		#carList li{position:relative;margin-top:15px;margin-bottom:15px;border:1px solid #ddd;width: 270px;display: inline-block;}
+		#carList li h4{text-align: center;}
+		#carList li p{text-align: center;}
+		#carList img{display:block;width:270px;}
+		#carList li .btn-close{position:absolute;top:0;right:0;padding:0 5px;cursor:default;}
+		#carList li .btn-close:hover{background-color:#f00;color:#fff;}
+		.subPrice{padding:5px 20px;color:#f00;font-weight:bold;text-align:right;}
+		#carList .price{color:#f00;}
+		.price::before{
+			content:'￥';
+			font-size:11px;
+		}
+		#carList .price span{font-size:11px;}
+	</style>
+	<link rel="stylesheet" href="css/common.css">
+	<script src="lib/jquery-3.1.1.js"></script>
+	<script src="lib/jquerycookie/jquery.cookie.js"></script>
+
+	<script>
+		$(()=>{
+			var $carList = $('#carList');
+			var $btnClear = $('#btnClear');
+			var $subPrice = $('.subPrice');
+
+			//获取cookie
+			var goodslist = $.cookie('carlist');
+
+			//把json字符串转换成js对象
+			goodslist = goodslist ? JSON.parse(goodslist) : [];
+
+			$carList.append('<ul/>');
+
+			var totalPrice = 0;
+
+			$('#carList ul').append(function(){
+				return	goodslist.map(function(item){
+						totalPrice += item.price * item.qty;
+						return '<li data-guid="'+item.guid+'"><img src="'+item.imgurl+'"><h4>'+item.name+'</h4><p class="price">'+item.price+'&times'+item.qty+'</p><span class="btn-close">&times;</span></li><hr>'; 
+					}).join('');
+			})
+
+			$subPrice.text(totalPrice.toFixed(2));
+
+			$btnClear.on('click',function(){
+				$.cookie('carlist','',{expires: -1 });
+				location.reload();
+			})
+
+			$carList.on('click','.btn-close',function(){
+
+				var $currentGUID = $(this).parent().data('guid');
+				//清除li
+				$(this).parent().next().remove();
+				$(this).parent().remove();
+				
+				// 清除cookie中对应的商品信息
+				for(var i=0;i<goodslist.length;i++){
+					if(goodslist[i].guid === $currentGUID){
+						goodslist.splice(i,1);
+						break;
+					}
+				}
+
+				var totalPrice = 0;
+				goodslist.map(function(item){
+					return totalPrice += item.price * item.qty;
+				})
+				$subPrice.text(totalPrice.toFixed(2));
+
+				//数组转换成字符串,上传至cookie
+				var carlist = JSON.stringify(goodslist);
+				$.cookie('carlist',carlist);
+
+			})
+
+		})
+	</script>
+
+</head>
+<body>
+	<h1>购物车</h1>
+	<div id="carList"></div>
+	<div class="subPrice price"></div>
+	<a href="javascript:" id="btnClear">清空购物车</a>
+	<a href="index.html">返回首页</a>
+</body>
+</html>

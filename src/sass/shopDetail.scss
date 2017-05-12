@@ -1,0 +1,90 @@
+.content{>p{padding:40px;}}
+.shop{
+	height:700px;
+	.box{
+		position:absolute;
+		left:300px;
+		top:300px;
+		.zoom img{height:300px;}
+		.small-list{
+			li{display: inline-block;}
+			img{width:100px;}
+		} 
+	}
+	.detail{
+		width:50%;
+		float:right;
+		.d1{p{padding:30px;}}
+		.d2{
+
+			div{
+				width:550px;height:50px;
+				h5{
+					display:inline-block;
+					line-height:50px;
+					color:#999;
+					padding-left:10px;
+					padding-right:10px;
+				}
+			}
+			.price{
+				height:100px;
+				background:url('../img/icons.png') 0 -50px no-repeat;
+				h5{line-height:100px;}
+				span{font-size:30px;color:#64a131;}
+			}
+			.standard{
+				span{font-size:12px;color:white;background-color:#64a131;}
+			}
+			.adress{span{color:#64a131;padding-left:10px;}}
+			.num{input{width:30px}button{width:20px;}}
+			.buy{
+				margin-top:30px;
+				span{
+					a{
+						font-size:20px;line-height:40px;
+						padding:10px;
+						border:1px solid #64a131;
+						border-radius:5px;
+						background-color:#f5ffed;
+						color:#64a131;
+					}
+				}
+			}
+		}
+	}
+}
+.production{
+	height:9000px;
+	position:relative;
+	.product{
+		width:60%;
+		position:absolute;
+		left:100px;
+		top:0px;
+		border:1px solid #ccc;
+		span{
+			width:100px;height:50px;
+			display:inline-block;text-align:center;
+			line-height:50px;
+		}		
+		ul{
+			li{
+				border:1px solid #ccc;
+				span{width:100px;height:50px;display:inline-block;border-right:2px solid #ccc;}
+				p{display:inline-block;line-height:50px;padding-left:5px;}
+			}
+		}
+		.prdtitle{
+			border:1px solid #ccc;
+			span{background:#f5ffed;}
+		}
+		#datalist{ul{li{margin:30px auto;img{margin:25px;}}}}		
+	}
+	.record{
+		width:25%;
+		float:right;
+		img{margin-left:40px;}
+		h4{text-align:center;}
+	}
+}

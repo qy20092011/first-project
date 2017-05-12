@@ -11,7 +11,8 @@ gulp.task('compileSass',function(){
 	//先查找sass文件所在的位置
 	gulp.src(['src/sass/top.scss','src/sass/login.scss',
 		'src/sass/footer.scss','src/sass/register.scss',
-		'src/sass/banner.scss','src/sass/main.scss'])
+		'src/sass/banner.scss','src/sass/main.scss',
+		'src/sass/shopDetail.scss','src/sass/shopstyle.scss'])
 	//通过pipe放大导入到gulp的插件中实现编译sass
 	.pipe(sass())
 

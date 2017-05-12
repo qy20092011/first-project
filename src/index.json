@@ -1,0 +1,230 @@
+[
+	[
+		{
+			"guid":"g01",
+			"src":"img/shop1 (1).jpg",
+			"name":"Driscoll`s霜衣蓝莓",
+			"specification":"/2盒",
+			"price":"39.90"
+		},{
+			"guid":"g02",
+			"src":"img/shop1 (2).jpg",
+			"name":"Driscoll`s云南树莓",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g03",
+			"src":"img/shop1 (3).jpg",
+			"name":"泰国山竹",
+			"specification":"/2+1斤",
+			"price":"88.00"
+		},{
+			"guid":"g04",
+			"src":"img/shop1 (4).jpg",
+			"name":"洛川苹果",
+			"specification":"/8斤",
+			"price":"99.00"
+		},{
+			"guid":"g05",
+			"src":"img/shop1 (5).jpg",
+			"name":"佳沛新西兰阳光金奇异果(巨无霸)",
+			"specification":"/22个",
+			"price":"199.00"
+		},{
+			"guid":"g06",
+			"src":"img/shop1 (6).jpg",
+			"name":"越南红心火龙果(小)",
+			"specification":"/4斤",
+			"price":"￥49.00"
+		},{
+			"guid":"g07",
+			"src":"img/shop1 (7).jpg",
+			"specification":"/2斤",
+			"name":"智利咔嚓脆青提",
+			"price":"69.90"
+		},{
+			"guid":"g08",
+			"src":"img/shop1 (8).jpg",
+			"name":"泰国玲珑榴莲",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g09",
+			"src":"img/shop1 (9).jpg",
+			"name":"美国加州红杉樱桃",
+			"specification":"/1斤",
+			"price":"108.00"
+		}	
+	],
+	[
+		{
+			"guid":"g01",
+			"src":"img/shop1 (1).jpg",
+			"name":"Driscoll`s霜衣蓝莓",
+			"specification":"/2盒",
+			"price":"39.90"
+		},{
+			"guid":"g02",
+			"src":"img/shop1 (2).jpg",
+			"name":"Driscoll`s云南树莓",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g03",
+			"src":"img/shop1 (3).jpg",
+			"name":"泰国山竹",
+			"specification":"/2+1斤",
+			"price":"88.00"
+		},{
+			"guid":"g04",
+			"src":"img/shop1 (4).jpg",
+			"name":"洛川苹果",
+			"specification":"/8斤",
+			"price":"99.00"
+		},{
+			"guid":"g05",
+			"src":"img/shop1 (5).jpg",
+			"name":"佳沛新西兰阳光金奇异果(巨无霸)",
+			"specification":"/22个",
+			"price":"199.00"
+		},{
+			"guid":"g06",
+			"src":"img/shop1 (6).jpg",
+			"name":"越南红心火龙果(小)",
+			"specification":"/4斤",
+			"price":"￥49.00"
+		},{
+			"guid":"g07",
+			"src":"img/shop1 (7).jpg",
+			"specification":"/2斤",
+			"name":"智利咔嚓脆青提",
+			"price":"69.90"
+		},{
+			"guid":"g08",
+			"src":"img/shop1 (8).jpg",
+			"name":"泰国玲珑榴莲",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g09",
+			"src":"img/shop1 (9).jpg",
+			"name":"美国加州红杉樱桃",
+			"specification":"/1斤",
+			"price":"108.00"
+		}		
+	],
+	[
+		{
+			"guid":"g01",
+			"src":"img/shop1 (1).jpg",
+			"name":"Driscoll`s霜衣蓝莓",
+			"specification":"/2盒",
+			"price":"39.90"
+		},{
+			"guid":"g02",
+			"src":"img/shop1 (2).jpg",
+			"name":"Driscoll`s云南树莓",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g03",
+			"src":"img/shop1 (3).jpg",
+			"name":"泰国山竹",
+			"specification":"/2+1斤",
+			"price":"88.00"
+		},{
+			"guid":"g04",
+			"src":"img/shop1 (4).jpg",
+			"name":"洛川苹果",
+			"specification":"/8斤",
+			"price":"99.00"
+		},{
+			"guid":"g05",
+			"src":"img/shop1 (5).jpg",
+			"name":"佳沛新西兰阳光金奇异果(巨无霸)",
+			"specification":"/22个",
+			"price":"199.00"
+		},{
+			"guid":"g06",
+			"src":"img/shop1 (6).jpg",
+			"name":"越南红心火龙果(小)",
+			"specification":"/4斤",
+			"price":"￥49.00"
+		},{
+			"guid":"g07",
+			"src":"img/shop1 (7).jpg",
+			"specification":"/2斤",
+			"name":"智利咔嚓脆青提",
+			"price":"69.90"
+		},{
+			"guid":"g08",
+			"src":"img/shop1 (8).jpg",
+			"name":"泰国玲珑榴莲",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g09",
+			"src":"img/shop1 (9).jpg",
+			"name":"美国加州红杉樱桃",
+			"specification":"/1斤",
+			"price":"108.00"
+		}		
+	],
+	[
+		{
+			"guid":"g01",
+			"src":"img/shop1 (1).jpg",
+			"name":"Driscoll`s霜衣蓝莓",
+			"specification":"/2盒",
+			"price":"39.90"
+		},{
+			"guid":"g02",
+			"src":"img/shop1 (2).jpg",
+			"name":"Driscoll`s云南树莓",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g03",
+			"src":"img/shop1 (3).jpg",
+			"name":"泰国山竹",
+			"specification":"/2+1斤",
+			"price":"88.00"
+		},{
+			"guid":"g04",
+			"src":"img/shop1 (4).jpg",
+			"name":"洛川苹果",
+			"specification":"/8斤",
+			"price":"99.00"
+		},{
+			"guid":"g05",
+			"src":"img/shop1 (5).jpg",
+			"name":"佳沛新西兰阳光金奇异果(巨无霸)",
+			"specification":"/22个",
+			"price":"199.00"
+		},{
+			"guid":"g06",
+			"src":"img/shop1 (6).jpg",
+			"name":"越南红心火龙果(小)",
+			"specification":"/4斤",
+			"price":"￥49.00"
+		},{
+			"guid":"g07",
+			"src":"img/shop1 (7).jpg",
+			"specification":"/2斤",
+			"name":"智利咔嚓脆青提",
+			"price":"69.90"
+		},{
+			"guid":"g08",
+			"src":"img/shop1 (8).jpg",
+			"name":"泰国玲珑榴莲",
+			"specification":"/2盒",
+			"price":"68.00"
+		},{
+			"guid":"g09",
+			"src":"img/shop1 (9).jpg",
+			"name":"美国加州红杉樱桃",
+			"specification":"/1斤",
+			"price":"108.00"
+		}		
+	]
+]

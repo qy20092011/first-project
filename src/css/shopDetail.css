@@ -1,0 +1,100 @@
+.content > p {
+  padding: 40px; }
+
+.shop {
+  height: 700px; }
+  .shop .box {
+    position: absolute;
+    left: 300px;
+    top: 300px; }
+    .shop .box .zoom img {
+      height: 300px; }
+    .shop .box .small-list li {
+      display: inline-block; }
+    .shop .box .small-list img {
+      width: 100px; }
+  .shop .detail {
+    width: 50%;
+    float: right; }
+    .shop .detail .d1 p {
+      padding: 30px; }
+    .shop .detail .d2 div {
+      width: 550px;
+      height: 50px; }
+      .shop .detail .d2 div h5 {
+        display: inline-block;
+        line-height: 50px;
+        color: #999;
+        padding-left: 10px;
+        padding-right: 10px; }
+    .shop .detail .d2 .price {
+      height: 100px;
+      background: url("../img/icons.png") 0 -50px no-repeat; }
+      .shop .detail .d2 .price h5 {
+        line-height: 100px; }
+      .shop .detail .d2 .price span {
+        font-size: 30px;
+        color: #64a131; }
+    .shop .detail .d2 .standard span {
+      font-size: 12px;
+      color: white;
+      background-color: #64a131; }
+    .shop .detail .d2 .adress span {
+      color: #64a131;
+      padding-left: 10px; }
+    .shop .detail .d2 .num input {
+      width: 30px; }
+    .shop .detail .d2 .num button {
+      width: 20px; }
+    .shop .detail .d2 .buy {
+      margin-top: 30px; }
+      .shop .detail .d2 .buy span a {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 10px;
+        border: 1px solid #64a131;
+        border-radius: 5px;
+        background-color: #f5ffed;
+        color: #64a131; }
+
+.production {
+  height: 9000px;
+  position: relative; }
+  .production .product {
+    width: 60%;
+    position: absolute;
+    left: 100px;
+    top: 0px;
+    border: 1px solid #ccc; }
+    .production .product span {
+      width: 100px;
+      height: 50px;
+      display: inline-block;
+      text-align: center;
+      line-height: 50px; }
+    .production .product ul li {
+      border: 1px solid #ccc; }
+      .production .product ul li span {
+        width: 100px;
+        height: 50px;
+        display: inline-block;
+        border-right: 2px solid #ccc; }
+      .production .product ul li p {
+        display: inline-block;
+        line-height: 50px;
+        padding-left: 5px; }
+    .production .product .prdtitle {
+      border: 1px solid #ccc; }
+      .production .product .prdtitle span {
+        background: #f5ffed; }
+    .production .product #datalist ul li {
+      margin: 30px auto; }
+      .production .product #datalist ul li img {
+        margin: 25px; }
+  .production .record {
+    width: 25%;
+    float: right; }
+    .production .record img {
+      margin-left: 40px; }
+    .production .record h4 {
+      text-align: center; }

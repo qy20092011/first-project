@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<script src="../lib/jquery-3.1.1.js"></script>
+	<script src="../lib/jquerycookie/jquery.cookie.js"></script>
+	<style>
+		*{margin: 0px;padding: 0px;}
+		.usercenter{width: 100%;height:2000px;margin:30px auto 30px;}
+		.sidebar{float: left;margin-left:130px;border: 1px solid #ccc;}
+		.sidebar .list-unstyled{width: 200px;}
+		.sidebar .list-unstyled li{width: 200px;text-align: center;padding: 10px;}
+		.sidebar .list-unstyled li a{display:block;padding: 5px;}
+		.sidebar .cur{background: #64a131;font-size: 20px;padding: 10px;color: white;}
+
+
+
+		.content{float: right;}
+		.content1{height:150px;margin-right:200px;border: 1px solid #ccc;}
+		.content1 ul li{float: left;border-right: 1px solid #ccc;margin-top: 35px;padding-left: 20px;padding-right: 20px;}
+		.content1 ul li a{color: #64a131;}
+		.content1 ul li div{float: left;color: white;padding: 17px;}
+
+		.content2{height: 100%;border: 1px solid #ccc;}
+		.content3{}
+		.content3 ul li{float: left;border: 1px solid #ccc;text-align: center;}
+	</style>
+
+	<style>
+		#carList li{position:relative;margin-top:15px;margin-bottom:15px;border:1px solid #ddd;width: 270px;}
+		#carList li h4{text-align: center;}
+		#carList li p{text-align: center;}
+		#carList img{display:block;width:270px;}
+		#carList li .btn-close{position:absolute;top:0;right:0;padding:0 5px;cursor:default;}
+		#carList li .btn-close:hover{background-color:#f00;color:#fff;}
+		.subPrice{padding:5px 20px;color:#f00;font-weight:bold;text-align:right;}
+		#carList .price{color:#f00;}
+		.price::before{
+			content:'￥';
+			font-size:11px;
+		}
+		#carList .price span{font-size:11px;}
+	</style>
+	<script>
+		$(()=>{
+			$('.top').load('top.html');
+			$('.footer').load('footer.html');
+
+			
+			$('.cur').parent().siblings('li').on('mouseenter','a',function(){
+				$(this).css({background:'#ccc',color:'white'});
+			}).on('mouseleave','a',function(){
+				$(this).css({background:'white',color:'#999'});
+			})
+
+
+			//购物车内容
+			var $carList = $('#carList');
+			var $btnClear = $('#btnClear');
+			var $subPrice = $('.subPrice');
+
+			//获取cookie
+			var goodslist = $.cookie('carlist');
+
+			//把json字符串转换成js对象
+			goodslist = goodslist ? JSON.parse(goodslist) : [];
+
+			$carList.append('<ul/>');
+
+			var totalPrice = 0;
+
+			$('#carList ul').append(function(){
+				return	goodslist.map(function(item){
+						totalPrice += item.price * item.qty;
+						return '<li data-guid="'+item.guid+'"><img src="../'+item.imgurl+'"></img><h4>'+item.name+'</h4><p class="price">'+item.price+'&times'+item.qty+'</p><span class="btn-close">&times;</span></li><hr>'; 
+					}).join('');
+			})
+
+			$subPrice.text(totalPrice.toFixed(2));
+
+			$btnClear.on('click',function(){
+				$.cookie('carlist','',{expires: -1 });
+				location.reload();
+			})
+
+			$carList.on('click','.btn-close',function(){
+
+				var $currentGUID = $(this).parent().data('guid');
+				//清除li
+				$(this).parent().next().remove();
+				$(this).parent().remove();
+				
+				// 清除cookie中对应的商品信息
+				for(var i=0;i<goodslist.length;i++){
+					if(goodslist[i].guid === $currentGUID){
+						goodslist.splice(i,1);
+						break;
+					}
+				}
+
+				var totalPrice = 0;
+				goodslist.map(function(item){
+					return totalPrice += item.price * item.qty;
+				})
+				$subPrice.text(totalPrice.toFixed(2));
+
+				//数组转换成字符串,上传至cookie
+				var carlist = JSON.stringify(goodslist);
+				$.cookie('carlist',carlist);
+
+			})
+
+
+
+			//获取浏览记录cookie
+			var $record = $.cookie('record');
+
+			//把json字符串转换成js对象
+			$record = $record ? JSON.parse($record) : [];
+
+			var ul = document.createElement('ul');
+			ul.innerHTML = $record.map(function(item){
+				return '<li><img src="'+item.imgurl+'"><h4>'+item.name+'</h4><h4>'+item.specification+'</h4></li>';
+			}).join('');
+			//插入浏览记录信息
+			$('.content3').append(ul);
+
+
+		})
+	</script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="top"></div>
+
+		<div class="usercenter">
+
+		    <div class="sidebar s_ani">
+		        <ul class="list-unstyled">
+					<li><a href="/user" class="cur">我的账户</a></li>
+					<li>
+						<a href="/user/orders">我的订单</a>
+						<a href="/user/tryeat">我的试吃</a>
+						<a href="/user/jfget">我的积分</a>
+						<a href="/user/transaction">账户余额</a>
+						<a href="/user/coupon">我的优惠券</a>
+						<a href="/user/giftsget">我的赠品</a>
+						<a href="/web/card_change" target="_blank">券卡兑换</a>
+					</li>
+					<li>
+						<a href="/user/recharge">充值中心</a>
+						<a href="/user/rechargebill">充值发票</a>
+					</li>
+					<li>
+						<a href="/user/basics">基本资料</a>
+						<a href="index.php">密码修改</a>
+						<a href="/user/address">收货地址</a>
+						<a href="/user/notice">通知设置</a>
+					</li>
+				    <li>
+				        <a href="/user/company">企业交易</a>
+				    </li>
+				</ul>
+		    </div>
+
+		    <div class="content">
+
+		    	<div class="content1">
+		    		<ul>
+		    			<li style="background: #64a131;margin-top: 0px;">
+		    				<div style="">
+		    					<p><img src="../img/default_userpic.png" style="border-radius: 50%;"></p>
+		    					<a href="" style="color: white;">查看等级特权</a>
+		    				</div>
+		    				<div style="">
+		    					<p>124414@qq.com</p>
+		    					<p>您已经消费0元,购买0次</p>
+		    					<p>距离鲜果达人V1还需</p>
+		    					<p>消费200元,购买2次</p>
+		    				</div>
+		    			</li>
+		    			<li>
+				    		<p>余额</p>
+				    		<p>￥0.00</p>
+				    		<a href="">立即充值></a>		    				
+		    			</li>
+		    			<li>
+				    		<p>积分</p>
+				    		<p>0</p>
+				    		<a href="">积分明细></a>		    				
+		    			</li>
+		    			<li style="border-right: none;">
+		    				<p>优惠券</p>
+				    		<p>3张</p>
+				    		<a href="">查看优惠券></a>	
+		    			</li>
+		    		</ul>
+		    	</div>
+				
+				<h2>最近订单:</h2>
+		    	<div class="content2">
+<!-- 					<table>
+					    <thead>
+							<tr class="order-nav">
+								<th class="pdl">商品</th>
+								<th class="shop-price">价格(元)</th>
+								<th class="shop-number">数量</th>
+								<th class="shop-action">商品操作</th>
+								<th class="shop-pocket">实付金额(元)</th>
+								<th class="shop-status">交易状态</th>
+								<th class="shop-operation">操作</th>
+							</tr>
+					    </thead>
+					</table> -->
+					<h1>购物车</h1>
+					<div id="carList">
+						
+					</div>
+					<div class="subPrice price"></div>
+					<a href="javascript:" id="btnClear">清空购物车</a>
+					<a href="index.html">返回首页</a>
+		    	</div>
+				
+		    	<h3>你可能感兴趣的商品</h3>
+		    	<div class="content3">
+					
+		    	</div>
+
+		    </div>
+
+
+	    </div>
+
+		<div class="footer"></div>
+	</div>
+	
+</div>
+</body>
+</html>

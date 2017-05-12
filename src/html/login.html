@@ -11,18 +11,36 @@
 
   <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="../libs/jquery-confirm/jquery-confirm.js"></script>
-<!--   <script>
+  <script src="../lib/jquery-3.1.1.js"></script>
+  <script src="../lib/jquerycookie/jquery.cookie.js"></script>
+  <script>
     $(()=>{
-      $('.top').load('top.html');
-      $('.footer').load('footer.html');
+
+      $('#email').blur(function(){  
+
+        var $email = $('#email').val();
+        console.log($email);
+        if(!/^[\w\-\.]+@[a-z\d\-]+(\.[a-z]+){1,2}$/.test($email)){
+          alert('你输入的邮箱不合法');
+          return false;
+        }
+      })
+
+      $('#password').blur(function(){
+        var $password = $('#password').val();
+        if(!/^\S{1,20}$/.test($password)){
+          alert('密码不合法');
+          return false;
+        }        
+      })      
+
     })
-  </script> -->  
+  </script>  
 </head>
 <body>
   
-  <!-- <div class="top"></div> -->
-
   <div class="container">
+
     <p>会员登录</p>
 
     <div class="login_l">
@@ -55,28 +73,51 @@
           </form>
         </div>
     </div>
+
   </div>
+
+
   
-  <!-- <div class="footer"></div> -->
-
-
-
   <script type="text/javascript">
     $(function(){
+
+
+
+
       $('#btn').click(function(){
+
+        
+
+        // 设置登录用户信息保存至cookie,显示在首页
+        var user = JSON.stringify($('#email').val());
+        $.cookie('user',user,{
+          expires: 7, path: '/myproject',
+          domain: 'localhost',
+          secure: false
+        })
+
+
+
+
+
+
+
+
+
         $.post('login.php',{
           email: $('#email').val(),
           password: $('#password').val()
-        }, function(response){
+        },function(response){
           var $obj = eval('(' + response + ')');
           if($obj.state){
-            window.location.href = 'index.php';
-          } else {
+            window.location.href = '../index.html';
+          }else{
             $.alert($obj.message);
           }
         })        
       })
     })
-  </script>  	
+  </script>
+  
 </body>
 </html>
