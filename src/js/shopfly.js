@@ -1,7 +1,6 @@
 $(function() {
 	var offset = $(".top2_r .search>a").offset();
 	$(".addcar").click(function(event){
-		console.log(1111);
 		var addcar = $(this);
 		var img = addcar.parent().parent().parent().find('img').attr('src');
 		var flyer = $('<img class="u-flyer" src="'+img+'">');

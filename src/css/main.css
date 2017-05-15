@@ -3,9 +3,11 @@
   .main .showAd {
     height: 200px;
     border-bottom: 1px solid #ccc; }
-    .main .showAd ul li {
-      float: left;
-      margin: 25px; }
+    .main .showAd ul {
+      display: flex; }
+      .main .showAd ul li {
+        margin: 20px;
+        flex: 1; }
   .main .shop {
     height: 1000px;
     border-bottom: 1px solid #ccc; }
@@ -20,18 +22,29 @@
       .main .shop .txt a {
         float: right;
         margin: 30px; }
-    .main .shop .show .larger {
+    .main .shop .show .addw {
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+    .main .shop .show .add {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
       transform: scale(1.1); }
-    .main .shop .show ul li {
+    .main .shop ul li {
       padding: 7px;
       float: left; }
-      .main .shop .show ul li h4 {
+      .main .shop ul li h4 {
         color: #999;
         display: inline-block; }
-        .main .shop .show ul li h4 span {
+        .main .shop ul li h4 span {
           color: #999; }
-      .main .shop .show ul li a {
+      .main .shop ul li a {
         float: right; }
-        .main .shop .show ul li a i {
+        .main .shop ul li a i {
           color: yellow;
           font-size: 30px; }
+      .main .shop ul li .showPic > a {
+        overflow: hidden; }
+        .main .shop ul li .showPic > a img {
+          display: block; }

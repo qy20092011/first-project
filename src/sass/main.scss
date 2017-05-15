@@ -3,8 +3,8 @@
 	.showAd{
 		height:200px;border-bottom:1px solid #ccc;
 		ul{
-
-			li{float:left;margin:25px;}			
+			display:flex;
+			li{margin:20px;flex:1;}		
 		}
 	}
 	
@@ -17,22 +17,36 @@
 			img{float:left;margin:30px;}
 			a{float:right;margin:30px;}
 		}
+
 		.show{
-			.larger{transform:scale(1.1);}
-			ul{
-				li{
-					padding:7px;
-					float:left;
-					h4{
-						color:#999;
-						display:inline-block;
-						span{color:#999;}	
-					}
-					a{	
-						float:right;
-						i{color:yellow;font-size:30px;}
-					}
+			// .larger{transform:scale(1.1);
+			.addw{
+		        -webkit-transition: all 0.5s ease-in-out;
+		  		-moz-transition: all 0.5s ease-in-out;
+		  		transition: all 0.5s ease-in-out;
+			}
+			.add{
+			    -webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				transform: scale(1.1);
+			}
+		}
+
+		ul{
+			li{
+				padding:7px;
+				float:left;
+				h4{
+					color:#999;
+					display:inline-block;
+					span{color:#999;}	
 				}
+				a{	
+					float:right;
+					i{color:yellow;font-size:30px;}
+				}
+				.showPic{&>a{overflow:hidden;img{display:block;}}}
 			}
 		}
 	}

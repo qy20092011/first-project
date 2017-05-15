@@ -37,6 +37,20 @@
 				$('.num input').val($num);
 			})
 			
+			//点击加入购物车上传信息
+			$('.buy span:last-child').on('click','a',function(){
+				$(this).text('已加入购物车');
+				$(this).css({background:'#64a131','color':'white'});
+				var shopinfo = $.cookie('record');
+				shopinfo = shopinfo ? JSON.parse(shopinfo) : [];
+				
+				shopinfo[0].qty = $('.num input').val(),shopinfo;
+				shopinfo[0].imgurl = shopinfo[0].imgurl.substring(3)
+				var carlist = JSON.stringify(shopinfo);
+				$.cookie('carlist', carlist, { expires: 7, path: '/myproject/src' });
+			})
+
+
 			//获取浏览记录cookie
 			var $record = $.cookie('record');
 
@@ -45,8 +59,7 @@
 
 			var ul = document.createElement('ul');
 			ul.innerHTML = $record.map(function(item){
-				console.log(item.imgurl)
-				return '<li><img src="'+item.imgurl+'"><h4>'+item.name+'</h4><h4>'+item.specification+'</h4></li>';
+				return '<li><img src="'+item.imgurl+'"><h4>'+item.name+'</h4><h4><span>'+item.price+'</span>'+item.specification+'</h4></li>';
 			}).join('');
 			//插入浏览记录信息
 			$('.record').append(ul);
@@ -105,8 +118,8 @@
 						<button class="num_r">+</button>
 					</div>
 					<div class="buy">
-						<span style=""><a href="">立即购买</a></span>
-						<span><a href="">加入购物车</a></span>
+						<span><a href="user.html">立即购买</a></span>
+						<span><a href="javascript:">加入购物车</a></span>
 					</div>
 				</div>
 			</div>			

@@ -8,12 +8,12 @@
 	$phone = $_POST["phone"];
 	$email = $_SESSION['login_email'];
 
-	$sql = "select * from gz1610 where email = '$email'";
+	$sql = "select * from loginuser where email = '$email'";
 	$result = query($sql);
 	if(count($result) > 0){
 		if($result[0]->password == $oldpassword){
 			//执行修改操作
-			$update = "update gz1610 set password = '$password', phone = '$phone' where email = '$email'";
+			$update = "update loginuser set password = '$password', phone = '$phone' where email = '$email'";
 			if(excute($update)){
 				echo "{state: true}";
 			} else {

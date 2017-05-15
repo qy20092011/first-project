@@ -40,9 +40,8 @@
 		<div class="dkNav">
 
 			<ul class="list-group">
-				<li class="list-group-item"><a href="javascript:">修改用户信息</a></li>
-				<li class="list-group-item"><a href="javascript:">修改密码</a></li>
-				<li class="list-group-item"><a href="user.html">用户中心</a></li>
+				<li class="list-group-item" style="background: #eee"><a href="javascript:">修改密码</a></li>
+				<li class="list-group-item"><a href="user.html">会员中心</a></li>
 				<li class="list-group-item"><a href="logout.php">退出</a></li>
 			</ul>
 

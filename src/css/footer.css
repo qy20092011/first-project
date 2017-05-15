@@ -14,13 +14,13 @@
   background: url(../img/icon.png) 40px -180px no-repeat; }
 
 .footer1 ul {
+  display: flex;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 20px; }
   .footer1 ul li {
-    width: 320px;
-    height: 60px;
-    display: inline-block; }
+    flex: 1;
+    height: 60px; }
 
 .footer2 {
   height: 300px;

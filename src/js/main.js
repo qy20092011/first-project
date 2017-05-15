@@ -1,13 +1,5 @@
 $(()=>{
 
-	//获取登录用户名
-	var $user = $.cookie('user');
-	if(String($user) != 'undefined'){
-		$('.user a:first-child').text($user).css('color','#f60');
-	}else{
-		$('.user a:first-child').css('color','#999');
-	}
-
 	//top2吸顶菜单
 	$(window).scroll(function(){
 		if($(window).scrollTop() >= 300){
@@ -19,17 +11,30 @@ $(()=>{
 	})
 
 
-	//上传浏览记录
+
+	//图片放大效果
+	$('.showPic').on('mouseenter','img',function(){
+		$(this).addClass('addw').addClass('add');
+	}).on('mouseleave','img',function(){
+		$(this).removeClass('addw').removeClass('add');
+	})
+
+
+
+	//点击图片上传浏览记录cookie
 	var $record = $.cookie('record');
 	$record = $record ? JSON.parse($record) : [];
 	
 	$('.show').on('click','img',function(){
 		var $curentli = $(this).parent().parent().parent();
+		var specificationTxt = $curentli.find('.price').parent().contents().filter(function(){
+    			return this.nodeType === 3;
+			}).text();
 		var shoprecord = {
 			imgurl:"../"+$(this).attr('src'),
 			name:$curentli.find('.name').text(),
 			price:$curentli.find('.price').text(),
-			specification:$curentli.find('.price').parent().text()
+			specification:specificationTxt
 
 		};
 		$record.push(shoprecord);
@@ -39,8 +44,7 @@ $(()=>{
 
 
 
-
-	//获取和上传商品购买信息
+	//点击购物车获取和上传商品购买信息cookie
 	var $goods = $('.goods');
 	var $carlist = $.cookie('carlist');
 	$carlist = $carlist ? JSON.parse($carlist) : [];
@@ -79,6 +83,7 @@ $(()=>{
 		}
 
 		var carlist = JSON.stringify($carlist);
+		console.log(carlist)
 		$.cookie('carlist',carlist);
 	})
 })
